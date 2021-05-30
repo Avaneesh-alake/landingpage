@@ -1,0 +1,389 @@
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url(./Gilroy-Light.oft);
+}
+
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url(./Gilroy-Light.oft);
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy-Light", sans-serif;
+}
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.col-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.col-left .menu {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 2rem 4rem;
+  overflow: hidden;
+}
+
+.col-left .menu h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+
+.col-left .menu ol {
+  margin: 4rem 0;
+  padding: 0;
+}
+
+.col-left .menu ol li {
+  font-size: 1.25rem;
+  margin: 3rem 0;
+  padding: 0.5rem 0;
+  position: relative;
+  counter-increment: counter;
+}
+
+.col-left .menu ol li a {
+  text-decoration: none;
+  color: wheat;
+}
+
+.col-left .menu ol li::before {
+  position: absolute;
+  color: grey;
+  content: "0" counter(counter);
+  top: -20px;
+}
+
+.col-left .menu ol li::marker {
+  font-size: 0;
+}
+
+.col-left .menu ol li.active a {
+  color: white;
+}
+
+.col-left .menu ol li.active::before {
+  color: white;
+}
+
+.col-left .menu ol li.active::after {
+  width: 200%;
+  position: absolute;
+  height: 1px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid white;
+}
+
+.col-left .footer {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.col-left .footer .top {
+  font-size: 1.5rem;
+  background-color: #fcb93e;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.col-left .footer .top img {
+  cursor: pointer;
+}
+
+.col-left .footer .bottom {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-image: url(./img/next_img.jpg);
+  background-size: cover;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.col-left .footer .bottom img {
+  cursor: pointer;
+}
+
+.col-center {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.col-center .heading {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 2rem 8rem;
+}
+
+.col-center .heading h2 {
+  font-family: "Gilroy-Extrabold",sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.col-center .heading h2 span {
+  color: white;
+  text-shadow: -1px -1px 0,1px -1px 0 #ff4000, -1px 1px 0 #ff4000, 1px 1px 0 #ff4000;
+}
+
+.col-center .heading h3 span {
+  font-family: "Gilroy-Extrabold",sans-serif;
+}
+
+.col-center .hero {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background-image: url(img/hero.png);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 6rem;
+}
+
+.col-center .hero .container {
+  width: 40%;
+}
+
+.col-center .hero .container h2 {
+  color: white;
+  font-family: "Gilroy-Extrabold",sans-serif;
+  font-size: 3rem;
+}
+
+.col-center .hero .container .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.col-right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.col-right .hero2 {
+  background-image: url(img/hero2.jpg);
+  background-size: cover;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-right .hero2 .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2rem;
+}
+
+.col-right .hero2 .top img {
+  cursor: pointer;
+}
+
+.col-right .hero2 .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.col-right .hero2 .bottom h2 {
+  color: white;
+  font-family: "Gilroy-Extrabold", sans-serif;
+  font-size: 2.5rem;
+}
+
+.col-right .footer {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col-right .footer .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  line-height: 1.7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-right .footer .left .actions, .col-right .footer .left .lines, .col-right .footer .left .share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.col-right .footer .left .likes {
+  margin: 2rem;
+}
+
+.col-right .footer .left .likes span, .col-right .footer .left .share span {
+  margin-left: 0.5rem;
+}
+
+.col-right .footer .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.col-right .footer .right h2 {
+  font-size: 2.5rem;
+  font-family: "Gilroy-Extrabold",sans-serif;
+}
+
+.col-right .footer .right h2 span {
+  text-shadow: -1px -1px 0,1px -1px 0 #ff4000, -1px 1px 0 #ff4000, 1px 1px 0 #ff4000;
+  color: white;
+  display: block;
+}
+
+.col-right .footer .right p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.col-right .footer .right p.author {
+  font-family: "Gilroy-Extrabold", sans-serif;
+}
+/*# sourceMappingURL=scss.css.map */
